@@ -1,0 +1,13 @@
+# ninja log v6
+19	344	7902044988044371	CMakeFiles/demo.dir/Application.cpp.obj	36aef536765ab4ee
+26	697	7902044988189773	CMakeFiles/demo.dir/imgui/imgui_demo.cpp.obj	4e1f40642805a79e
+41	700	7902044988331295	CMakeFiles/demo.dir/imgui/imgui_tables.cpp.obj	c9e4c345c0e5a749
+76	733	7902044988690878	CMakeFiles/demo.dir/imgui/imgui_impl_win32.cpp.obj	6b4eea14be9945c5
+34	882	7902044988267271	CMakeFiles/demo.dir/imgui/imgui_draw.cpp.obj	e50b15b280b0c722
+48	928	7902044988410063	CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.obj	b644c4a569b2af72
+69	1076	7902044988623873	CMakeFiles/demo.dir/main_win32.cpp.obj	24fc8e4be5070888
+62	1114	7902044988550988	CMakeFiles/demo.dir/imgui/imgui_impl_dx11.cpp.obj	48f1302fb6f69b15
+55	1393	7902044988465405	CMakeFiles/demo.dir/imgui/imgui.cpp.obj	810af242ac257cb5
+1394	2588	7902045001844298	demo.exe	aa17c09c9ef53240
+21	178	7902071290703242	CMakeFiles/demo.dir/Application.cpp.obj	36aef536765ab4ee
+179	857	7902071292357555	demo.exe	aa17c09c9ef53240

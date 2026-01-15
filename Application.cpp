@@ -10,6 +10,7 @@ namespace ClassGame {
         // game starting point
         // this is called by the main render loop in main.cpp
         //
+
         void GameStartUp() 
         {
             // Initialize logging system
