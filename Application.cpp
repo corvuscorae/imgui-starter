@@ -3,15 +3,23 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
+#include <fstream>
+#include <iomanip>
+#include <ctime>
+#include <sstream>
 
 namespace ClassGame
 {
     //
     // our global variables
     //
+    bool show_game_panel = true;
     bool show_game_log = true;
     bool show_imgui_demo = false;
     bool show_log_demo = false;
+
+    bool log_to_console = true;
+    bool log_to_file = false;
 
     struct LogItem
     {
@@ -56,9 +64,12 @@ namespace ClassGame
     private:
         Logger() = default;
         std::vector<LogItem> log;
+        std::ofstream file;
+        std::string filename;
 
     public:
         int log_size = 0;
+        bool to_console_enabled = true;
 
         const char *level[3] = {
             "INFO",
@@ -75,27 +86,52 @@ namespace ClassGame
         static Logger &GetInstance()
         {
             static Logger instance;
-
             return instance;
+        }
+
+        void ToggleConsoleLog(bool b){
+            to_console_enabled = b;
+        }
+
+        void WriteLogToFile(const std::string &_filename = "game_log.txt"){
+            // OPEN FILE
+            if(file.is_open()){
+                file.close();
+            }
+
+            filename = _filename;
+            file.open(filename, std::ios::out);
+
+            // WRITE 
+            if(file.is_open()){
+                for(int i = 0; i < log.size(); i++){
+                    file << log.at(i).print() << "\n";
+                }
+                file.flush();
+            }
         }
 
         void LogInfo(const char *message, int lvl = 0)
         {
-            // TEMP: test code
             LogItem new_item(level[lvl], message, color[lvl]);
             log.push_back(new_item);
 
-            std::cout << new_item.print() << std::endl;
+            if(to_console_enabled){
+                std::cout << new_item.print() << std::endl;
+            }
+
             log_size++;
         }
 
         void LogGameEvent(const char *message, int lvl = 0)
         {
-            // TEMP: test code
             LogItem new_item(level[lvl], message, "GAME", color[lvl]);
             log.push_back(new_item);
 
-            std::cout << new_item.print() << std::endl;
+            if(to_console_enabled){
+                std::cout << new_item.print() << std::endl;
+            }
+
             log_size++;
         }
 
@@ -146,9 +182,25 @@ namespace ClassGame
         ImGui::DockSpaceOverViewport();
 
         //-- GAME CONTROL WINDOW --//
-        ImGui::Begin("Game Control");
+        ImGui::Begin("Game Control", &show_game_panel, ImGuiWindowFlags_MenuBar);
 
         ImGui::Text("This is the game control panel");
+
+        // MENU
+        if (ImGui::BeginMenuBar())
+        {
+            if (ImGui::BeginMenu("log options"))
+            {
+                if(ImGui::MenuItem("console", "", &log_to_console)){
+                    logger.ToggleConsoleLog(log_to_console);
+                }
+                if (ImGui::MenuItem("file", "")) { 
+                    logger.WriteLogToFile();
+                }
+                ImGui::EndMenu();
+            }
+            ImGui::EndMenuBar();
+        }
 
         // BUTTONS
         if (ImGui::Button("Log Event"))
@@ -202,10 +254,12 @@ namespace ClassGame
             }
 
             // PRINT LOG ITEMS
-            for (int i = 0; i < logger.log_size; i++)
-            {
-                ImVec4 text_color = logger.get(i).color;
-                ImGui::TextColored(text_color, logger.print(i).c_str());
+            if(log_to_console){
+                for (int i = 0; i < logger.log_size; i++)
+                {
+                    ImVec4 text_color = logger.get(i).color;
+                    ImGui::TextColored(text_color, logger.print(i).c_str());
+                }
             }
 
             ImGui::End();

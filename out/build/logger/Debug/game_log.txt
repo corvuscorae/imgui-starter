@@ -1,0 +1,2 @@
+[INFO] Game started successfully
+[INFO] [GAME] Application initialized
