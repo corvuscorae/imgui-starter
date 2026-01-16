@@ -10,22 +10,14 @@
 #include <cstring>
 #include <string>
 
-
 struct LogItem
 {
     const char *level;
     const char *dat;
-    const char *type = NULL;
+    const char *type;
     ImVec4 color;
 
-    LogItem(const char *_level, const char *_dat, ImVec4 _col)
-    {
-        level = _level;
-        dat = _dat;
-        color = _col;
-    }
-
-    LogItem(const char *_level, const char *_dat, const char *_type, ImVec4 _col)
+    LogItem(const char *_level, const char *_dat, ImVec4 _col, const char *_type = NULL)
     {
         level = _level;
         dat = _dat;
@@ -61,15 +53,33 @@ public:
     int log_size = 0;
     bool to_console_enabled = true;
 
-    const char *level[3] = {
+    enum types {
+        DEFAULT,
+        GAME
+    };
+
+    const char *type_text[2] = {
+        NULL,
+        "GAME"
+    };
+
+    enum level {
+        INFO,
+        WARN,
+        ERROR
+    };
+
+    const char *level_text[3] = {
         "INFO",
         "WARN",
-        "ERROR"};
+        "ERROR"
+    };
 
     const ImVec4 color[3] = {
         ImVec4(1, 1, 1, 1),
         ImVec4(1, 1, 0, 1),
-        ImVec4(1, 0, 0, 1)};
+        ImVec4(1, 0, 0, 1)
+    };
 
     static Logger &GetInstance()
     {
@@ -77,10 +87,10 @@ public:
         return instance;
     }
 
+    // FUNCTIONS
     void ToggleConsoleLog(bool b);
     void WriteLogToFile(const std::string &_filename = "game_log.txt");
-    void LogInfo(const char *message, int lvl = 0);
-    void LogGameEvent(const char *message, int lvl = 0);
+    void Log(const char *message, int lvl = 0, int type = NULL);
     void clear();
     LogItem get(int i);
     std::string print_last();

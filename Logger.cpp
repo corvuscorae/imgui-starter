@@ -27,22 +27,8 @@ void Logger::WriteLogToFile(const std::string &_filename)
     }
 }
 
-void Logger::LogInfo(const char *message, int lvl)
-{
-    LogItem new_item(level[lvl], message, color[lvl]);
-    log.push_back(new_item);
-
-    if (to_console_enabled)
-    {
-        std::cout << new_item.print() << std::endl;
-    }
-
-    log_size++;
-}
-
-void Logger::LogGameEvent(const char *message, int lvl)
-{
-    LogItem new_item(level[lvl], message, "GAME", color[lvl]);
+void Logger::Log(const char *message, int lvl, int type){
+    LogItem new_item(level_text[lvl], message, color[lvl], type_text[type]);
     log.push_back(new_item);
 
     if (to_console_enabled)

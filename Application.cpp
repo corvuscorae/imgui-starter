@@ -24,8 +24,8 @@ namespace ClassGame
     //
     void GameStartUp()
     {
-        logger.LogInfo("Game started successfully");
-        logger.LogGameEvent("Application initialized");
+        logger.Log("Game started successfully");
+        logger.Log("Application initialized", logger.INFO, logger.GAME);
     }
 
     //
@@ -62,17 +62,17 @@ namespace ClassGame
         // BUTTONS
         if (ImGui::Button("Log Event"))
         {
-            logger.LogGameEvent("This is a test event.", 0);
+            logger.Log("This is a test event.", logger.INFO, logger.GAME);
         }
         ImGui::SameLine();
         if (ImGui::Button("Log Game Warn"))
         {
-            logger.LogGameEvent("This is a test game warning.", 1);
+            logger.Log("This is a test game warning.", logger.WARN, logger.GAME);
         }
         ImGui::SameLine();
         if (ImGui::Button("Log Game Error"))
         {
-            logger.LogGameEvent("This is a test game error.", 2);
+            logger.Log("This is a test game error.", logger.ERROR, logger.GAME);
         }
 
         // FRAMERATE
@@ -97,17 +97,17 @@ namespace ClassGame
             ImGui::SameLine();
             if (ImGui::Button("Test Info"))
             {
-                logger.LogInfo("This is test info.", 0);
+                logger.Log("This is test info.");
             }
             ImGui::SameLine();
             if (ImGui::Button("Test Warn"))
             {
-                logger.LogInfo("This is a test warning.", 1);
+                logger.Log("This is a test warning.", logger.WARN);
             }
             ImGui::SameLine();
             if (ImGui::Button("Test Error"))
             {
-                logger.LogInfo("This is a test error.", 2);
+                logger.Log("This is a test error.", logger.ERROR);
             }
 
             // PRINT LOG ITEMS
