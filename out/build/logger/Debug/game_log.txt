@@ -3,8 +3,3 @@
 [INFO] [GAME] This is a test event.
 [WARN] [GAME] This is a test game warning.
 [ERROR] [GAME] This is a test game error.
-[WARN] [GAME] This is a test game warning.
-[INFO] [GAME] This is a test event.
-[INFO] This is test info.
-[WARN] This is a test warning.
-[ERROR] This is a test error.

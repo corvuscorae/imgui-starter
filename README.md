@@ -1,12 +1,14 @@
 # imgui-starter
 
-Using the provided code provided here you have a base Dear IMGUI project for Windows and macOS. There is a basic CMakefile in this project that includes the necessary files to create an application that brings up just a basic screen.
+**Built for (and tested on) Windows.**
 
-You must add a logging system to this code that you will be using THROUGHOUT the quarter. This logging system should do two things.
+Rigging up this logging system took a bit of trial and error. I used [Graham's example code](https://github.com/gdevine-ucsc/imgui-starter) to search the ImGui library for relevant tools in window creation, and to understand the order in which to call them. I also referred to [ImGui's example code](https://github.com/aegismichael4/imgui-starter/blob/main/CMakeLists.txt) for additional help. 
 
-It should be able to log to a Dear IMGUI debug console
-It should also log its output to a file.
+After I got a basic Logger class made, I moved on to stylizing outputs with different colors for different levels. Then, I did some refactoring: instead of calling `LogInfo()` and `LogGameEvent()`, I consolidated my logic into a single `Log()` function, which takes a message, a level, and a type (where type can be `DEFAULT` or `GAME`). I used enums to set the level and type.
 
-For the submission, make a branch of this repo and submit a new GitHub URL
+The most challenging thing so far was trying to figure out how to write the log to a file. Originally, I expected to use a tool from the ImGui library, but I wound up using the Standard Library instead.
 
-Built for (and tested on) Windows.
+### TODO/Future Improvements
+* [ ] revisit using ImGui tools for file output.
+* [ ] add timestamps to log files
+* [ ] maybe rename log files with timestamp data? (or otherwise prevent overwrites)
