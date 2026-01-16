@@ -9,6 +9,10 @@ namespace ClassGame
     //
     // our global variables
     //
+    bool show_game_log = true;
+    bool show_imgui_demo = false;
+    bool show_log_demo = false;
+
     struct LogItem
     {
         const char *level;
@@ -137,28 +141,16 @@ namespace ClassGame
     //
     void RenderGame()
     {
+        ImGuiIO& io = ImGui::GetIO(); (void)io;
+
         ImGui::DockSpaceOverViewport();
-
-        //-- DEMO WINDOW --//
-        ImGui::ShowDemoWindow();
-
-        //-- LOG DEMO WINDOW --//
-        ImGui::Begin("ImGui Log Demo");
-        ImGui::LogButtons();
-
-        if (ImGui::Button("Copy \"Hello, world!\" to clipboard"))
-        {
-            ImGui::LogToClipboard();
-            ImGui::LogText("Hello, world!");
-            ImGui::LogFinish();
-        }
-        ImGui::End();
 
         //-- GAME CONTROL WINDOW --//
         ImGui::Begin("Game Control");
 
         ImGui::Text("This is the game control panel");
 
+        // BUTTONS
         if (ImGui::Button("Log Event"))
         {
             logger.LogGameEvent("This is a test event.", 0);
@@ -174,38 +166,73 @@ namespace ClassGame
             logger.LogGameEvent("This is a test game error.", 2);
         }
 
-        ImGui::End();
+        // FRAMERATE
+        ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
 
-        //--- GAME LOG WINDOW ---//
-        ImGui::Begin("Game Log");
-
-        if (ImGui::Button("Clear"))
-        {
-            logger.clear(); // ???
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("Test Info"))
-        {
-            logger.LogInfo("This is test info.", 0);
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("Test Warn"))
-        {
-            logger.LogInfo("This is a test warning.", 1);
-        }
-        ImGui::SameLine();
-        if (ImGui::Button("Test Error"))
-        {
-            logger.LogInfo("This is a test error.", 2);
-        }
-
-        for (int i = 0; i < logger.log_size; i++)
-        {
-            ImVec4 text_color = logger.get(i).color;
-            ImGui::TextColored(text_color, logger.print(i).c_str());
-        }
+        // TOGGLE WINDOWS
+        ImGui::Checkbox("Game Log", &show_game_log);
+        ImGui::Checkbox("Demo Window", &show_imgui_demo);      
+        ImGui::Checkbox("Imgui Log Demo", &show_log_demo);
 
         ImGui::End();
+
+         //--- GAME LOG WINDOW ---//
+        if(show_game_log){
+            ImGui::Begin("Game Log", &show_game_log);
+
+            // BUTTONS
+            if (ImGui::Button("Clear"))
+            {
+                logger.clear(); // ???
+            }
+            ImGui::SameLine();
+            if (ImGui::Button("Test Info"))
+            {
+                logger.LogInfo("This is test info.", 0);
+            }
+            ImGui::SameLine();
+            if (ImGui::Button("Test Warn"))
+            {
+                logger.LogInfo("This is a test warning.", 1);
+            }
+            ImGui::SameLine();
+            if (ImGui::Button("Test Error"))
+            {
+                logger.LogInfo("This is a test error.", 2);
+            }
+
+            for (int i = 0; i < logger.log_size; i++)
+            {
+                ImVec4 text_color = logger.get(i).color;
+                ImGui::TextColored(text_color, logger.print(i).c_str());
+            }
+
+            ImGui::End();
+        }
+
+        //-- DEMO WINDOW --//
+        if(show_imgui_demo){
+            ImGui::ShowDemoWindow(&show_imgui_demo);
+        }
+
+        //-- LOG DEMO WINDOW --//
+        if(show_log_demo){
+            ImGui::Begin("ImGui Log Demo", &show_log_demo);
+            ImGui::LogButtons();
+
+            if (ImGui::Button("Copy \"Hello, world!\" to clipboard"))
+            {
+                ImGui::LogToClipboard();
+                ImGui::LogText("Hello, world!");
+                ImGui::LogFinish();
+            }
+
+            if (ImGui::Button("Close Me")){
+                show_log_demo = false;
+            }
+            
+            ImGui::End();
+        }
     }
 
     //
