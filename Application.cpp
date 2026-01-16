@@ -16,7 +16,7 @@ namespace ClassGame
     bool log_to_file = false;
 
     // Initialize logging system
-    Logger &logger = Logger::GetInstance();
+    Logger* logger = Logger::GetInstance();
 
     //
     // game starting point
@@ -24,8 +24,8 @@ namespace ClassGame
     //
     void GameStartUp()
     {
-        logger.Log("Game started successfully");
-        logger.Log("Application initialized", logger.INFO, logger.GAME);
+        logger->Log("Game started successfully");
+        logger->Log("Application initialized", logger->INFO, logger->GAME);
     }
 
     //
@@ -59,10 +59,10 @@ namespace ClassGame
             if (ImGui::BeginMenu("log options"))
             {
                 if(ImGui::MenuItem("console", "", &log_to_console)){
-                    logger.ToggleConsoleLog(log_to_console);
+                    logger->ToggleConsoleLog(log_to_console);
                 }
                 if (ImGui::MenuItem("file", "")) { 
-                    logger.WriteLogToFile();
+                    logger->WriteLogToFile();
                 }
                 ImGui::EndMenu();
             }
@@ -72,17 +72,17 @@ namespace ClassGame
         // BUTTONS
         if (ImGui::Button("Log Event"))
         {
-            logger.Log("This is a test event.", logger.INFO, logger.GAME);
+            logger->Log("This is a test event.", logger->INFO, logger->GAME);
         }
         ImGui::SameLine();
         if (ImGui::Button("Log Game Warn"))
         {
-            logger.Log("This is a test game warning.", logger.WARN, logger.GAME);
+            logger->Log("This is a test game warning.", logger->WARN, logger->GAME);
         }
         ImGui::SameLine();
         if (ImGui::Button("Log Game Error"))
         {
-            logger.Log("This is a test game error.", logger.ERROR, logger.GAME);
+            logger->Log("This is a test game error.", logger->ERROR, logger->GAME);
         }
 
         // FRAMERATE
@@ -104,30 +104,30 @@ namespace ClassGame
             // BUTTONS
             if (ImGui::Button("Clear"))
             {
-                logger.clear(); // ???
+                logger->clear(); // ???
             }
             ImGui::SameLine();
             if (ImGui::Button("Test Info"))
             {
-                logger.Log("This is test info.");
+                logger->Log("This is test info.");
             }
             ImGui::SameLine();
             if (ImGui::Button("Test Warn"))
             {
-                logger.Log("This is a test warning.", logger.WARN);
+                logger->Log("This is a test warning.", logger->WARN);
             }
             ImGui::SameLine();
             if (ImGui::Button("Test Error"))
             {
-                logger.Log("This is a test error.", logger.ERROR);
+                logger->Log("This is a test error.", logger->ERROR);
             }
 
             // PRINT LOG ITEMS
             if(log_to_console){
-                for (int i = 0; i < logger.log_size; i++)
+                for (int i = 0; i < logger->log_size; i++)
                 {
-                    ImVec4 text_color = logger.get(i).color;
-                    ImGui::TextColored(text_color, logger.print(i).c_str());
+                    ImVec4 text_color = logger->get(i).color;
+                    ImGui::TextColored(text_color, logger->print(i).c_str());
                 }
             }
 

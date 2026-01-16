@@ -44,10 +44,12 @@ struct LogItem
 class Logger
 {
 private:
-    Logger() = default;
     std::vector<LogItem> log;
     std::ofstream file;
     std::string filename;
+    static Logger* instance;
+
+    Logger() {};
 
 public:
     int log_size = 0;
@@ -57,7 +59,6 @@ public:
         DEFAULT,
         GAME
     };
-
     const char *type_text[2] = {
         NULL,
         "GAME"
@@ -68,22 +69,23 @@ public:
         WARN,
         ERROR
     };
-
     const char *level_text[3] = {
         "INFO",
         "WARN",
         "ERROR"
     };
-
     const ImVec4 color[3] = {
         ImVec4(1, 1, 1, 1),
         ImVec4(1, 1, 0, 1),
         ImVec4(1, 0, 0, 1)
     };
 
-    static Logger &GetInstance()
+    static Logger* GetInstance()
     {
-        static Logger instance;
+        // (improved this function based on feedback from Graham)
+        if(instance == nullptr){
+            instance = new Logger();
+        }
         return instance;
     }
 

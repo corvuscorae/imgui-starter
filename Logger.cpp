@@ -1,61 +1,63 @@
 #include "Logger.h"
 
+Logger* Logger::instance = nullptr;
+
 void Logger::ToggleConsoleLog(bool b)
 {
-    to_console_enabled = b;
+    this->to_console_enabled = b;
 }
 
 void Logger::WriteLogToFile(const std::string &_filename)
 {
     // OPEN FILE
-    if (file.is_open())
+    if (this->file.is_open())
     {
-        file.close();
+        this->file.close();
     }
 
-    filename = _filename;
-    file.open(filename, std::ios::out);
+    this->filename = _filename;
+    this->file.open(this->filename, std::ios::out);
 
     // WRITE
-    if (file.is_open())
+    if (this->file.is_open())
     {
-        for (int i = 0; i < log.size(); i++)
+        for (int i = 0; i < this->log.size(); i++)
         {
-            file << log.at(i).print() << "\n";
+            this->file << this->log.at(i).print() << "\n";
         }
-        file.flush();
+        this->file.flush();
     }
 }
 
 void Logger::Log(const char *message, int lvl, int type){
     LogItem new_item(level_text[lvl], message, color[lvl], type_text[type]);
-    log.push_back(new_item);
+    this->log.push_back(new_item);
 
-    if (to_console_enabled)
+    if (this->to_console_enabled)
     {
         std::cout << new_item.print() << std::endl;
     }
 
-    log_size++;
+    this->log_size++;
 }
 
 void Logger::clear()
 {
-    log.clear();
-    log_size = 0;
+    this->log.clear();
+    this->log_size = 0;
 }
 
 LogItem Logger::get(int i)
 {
-    return log.at(i);
+    return this->log.at(i);
 }
 
 std::string Logger::print_last()
 {
-    return log.back().print();
+    return this->log.back().print();
 }
 
 std::string Logger::print(int i)
 {
-    return log.at(i).print();
+    return this->log.at(i).print();
 }
