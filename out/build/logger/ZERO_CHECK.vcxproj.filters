@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\raven\OneDrive\Desktop\.123\imgui-starter\out\build\logger\CMakeFiles\e1c6e59f2a0dd0c84926f780dfe33522\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9F43DB19-CB7B-35FF-91CC-C324A8C96700}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

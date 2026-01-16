@@ -1,0 +1,9 @@
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/Experimental.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/Nightly.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/Continuous.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/demo.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/PACKAGE.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/RUN_TESTS.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/ALL_BUILD.dir
+C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/ZERO_CHECK.dir

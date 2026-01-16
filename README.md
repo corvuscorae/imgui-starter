@@ -8,3 +8,5 @@ It should be able to log to a Dear IMGUI debug console
 It should also log its output to a file.
 
 For the submission, make a branch of this repo and submit a new GitHub URL
+
+Built for (and tested on) Windows.

@@ -201,6 +201,7 @@ namespace ClassGame
                 logger.LogInfo("This is a test error.", 2);
             }
 
+            // PRINT LOG ITEMS
             for (int i = 0; i < logger.log_size; i++)
             {
                 ImVec4 text_color = logger.get(i).color;
@@ -218,6 +219,8 @@ namespace ClassGame
         //-- LOG DEMO WINDOW --//
         if(show_log_demo){
             ImGui::Begin("ImGui Log Demo", &show_log_demo);
+
+            // BUTTONS
             ImGui::LogButtons();
 
             if (ImGui::Button("Copy \"Hello, world!\" to clipboard"))
