@@ -95,7 +95,7 @@ events:
       The output was:
       0
       MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 1/15/2026 6:55:50 PM.
+      Build started 1/16/2026 11:41:11 AM.
       
       Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\4.2.1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -124,7 +124,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.48
+      Time Elapsed 00:00:00.90
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -804,7 +804,7 @@ events:
       The output was:
       0
       MSBuild version 17.14.23+b0019275e for .NET Framework
-      Build started 1/15/2026 6:55:51 PM.
+      Build started 1/16/2026 11:41:12 AM.
       
       Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\4.2.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -833,7 +833,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.47
+      Time Elapsed 00:00:00.87
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -1177,8 +1177,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-uvz1hw"
-      binary: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-uvz1hw"
+      source: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-1a7hqa"
+      binary: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-1a7hqa"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
@@ -1186,39 +1186,39 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-uvz1hw'
+        Change Dir: 'C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-1a7hqa'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e6bc3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_490fb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 1/15/2026 6:55:52 PM.
+        Build started 1/16/2026 11:41:14 AM.
         
-        Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-uvz1hw\\cmTC_e6bc3.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-1a7hqa\\cmTC_490fb.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-uvz1hw\\Debug\\".
-          Creating directory "cmTC_e6bc3.dir\\Debug\\cmTC_e6bc3.tlog\\".
+          Creating directory "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-1a7hqa\\Debug\\".
+          Creating directory "cmTC_490fb.dir\\Debug\\cmTC_490fb.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_e6bc3.dir\\Debug\\cmTC_e6bc3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_e6bc3.dir\\Debug\\cmTC_e6bc3.tlog\\unsuccessfulbuild".
+          Creating "cmTC_490fb.dir\\Debug\\cmTC_490fb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_490fb.dir\\Debug\\cmTC_490fb.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e6bc3.dir\\Debug\\\\" /Fd"cmTC_e6bc3.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_490fb.dir\\Debug\\\\" /Fd"cmTC_490fb.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_e6bc3.dir\\Debug\\\\" /Fd"cmTC_e6bc3.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_490fb.dir\\Debug\\\\" /Fd"cmTC_490fb.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-uvz1hw\\Debug\\cmTC_e6bc3.exe" /INCREMENTAL /ILK:"cmTC_e6bc3.dir\\Debug\\cmTC_e6bc3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-uvz1hw/Debug/cmTC_e6bc3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-uvz1hw/Debug/cmTC_e6bc3.lib" /MACHINE:X64  /machine:x64 cmTC_e6bc3.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_e6bc3.vcxproj -> C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-uvz1hw\\Debug\\cmTC_e6bc3.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-1a7hqa\\Debug\\cmTC_490fb.exe" /INCREMENTAL /ILK:"cmTC_490fb.dir\\Debug\\cmTC_490fb.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-1a7hqa/Debug/cmTC_490fb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-1a7hqa/Debug/cmTC_490fb.lib" /MACHINE:X64  /machine:x64 cmTC_490fb.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_490fb.vcxproj -> C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-1a7hqa\\Debug\\cmTC_490fb.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_e6bc3.dir\\Debug\\cmTC_e6bc3.tlog\\unsuccessfulbuild".
-          Touching "cmTC_e6bc3.dir\\Debug\\cmTC_e6bc3.tlog\\cmTC_e6bc3.lastbuildstate".
-        Done Building Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-uvz1hw\\cmTC_e6bc3.vcxproj" (default targets).
+          Deleting file "cmTC_490fb.dir\\Debug\\cmTC_490fb.tlog\\unsuccessfulbuild".
+          Touching "cmTC_490fb.dir\\Debug\\cmTC_490fb.tlog\\cmTC_490fb.lastbuildstate".
+        Done Building Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-1a7hqa\\cmTC_490fb.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.47
+        Time Elapsed 00:00:00.75
         
       exitCode: 0
   -
@@ -1258,8 +1258,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-wy1ner"
-      binary: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-wy1ner"
+      source: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-n0uv2q"
+      binary: "C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-n0uv2q"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
@@ -1268,39 +1268,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-wy1ner'
+        Change Dir: 'C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-n0uv2q'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_50f0f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ffb64.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.14.23+b0019275e for .NET Framework
-        Build started 1/15/2026 6:55:53 PM.
+        Build started 1/16/2026 11:41:15 AM.
         
-        Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-wy1ner\\cmTC_50f0f.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-n0uv2q\\cmTC_ffb64.vcxproj" on node 1 (default targets).
         PrepareForBuild:
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-wy1ner\\Debug\\".
-          Creating directory "cmTC_50f0f.dir\\Debug\\cmTC_50f0f.tlog\\".
+          Creating directory "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-n0uv2q\\Debug\\".
+          Creating directory "cmTC_ffb64.dir\\Debug\\cmTC_ffb64.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_50f0f.dir\\Debug\\cmTC_50f0f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_50f0f.dir\\Debug\\cmTC_50f0f.tlog\\unsuccessfulbuild".
+          Creating "cmTC_ffb64.dir\\Debug\\cmTC_ffb64.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ffb64.dir\\Debug\\cmTC_ffb64.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_50f0f.dir\\Debug\\\\" /Fd"cmTC_50f0f.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_ffb64.dir\\Debug\\\\" /Fd"cmTC_ffb64.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_50f0f.dir\\Debug\\\\" /Fd"cmTC_50f0f.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_ffb64.dir\\Debug\\\\" /Fd"cmTC_ffb64.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-wy1ner\\Debug\\cmTC_50f0f.exe" /INCREMENTAL /ILK:"cmTC_50f0f.dir\\Debug\\cmTC_50f0f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-wy1ner/Debug/cmTC_50f0f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-wy1ner/Debug/cmTC_50f0f.lib" /MACHINE:X64  /machine:x64 cmTC_50f0f.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_50f0f.vcxproj -> C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-wy1ner\\Debug\\cmTC_50f0f.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-n0uv2q\\Debug\\cmTC_ffb64.exe" /INCREMENTAL /ILK:"cmTC_ffb64.dir\\Debug\\cmTC_ffb64.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-n0uv2q/Debug/cmTC_ffb64.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/raven/OneDrive/Desktop/.123/imgui-starter/out/build/logger/CMakeFiles/CMakeScratch/TryCompile-n0uv2q/Debug/cmTC_ffb64.lib" /MACHINE:X64  /machine:x64 cmTC_ffb64.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_ffb64.vcxproj -> C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-n0uv2q\\Debug\\cmTC_ffb64.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_50f0f.dir\\Debug\\cmTC_50f0f.tlog\\unsuccessfulbuild".
-          Touching "cmTC_50f0f.dir\\Debug\\cmTC_50f0f.tlog\\cmTC_50f0f.lastbuildstate".
-        Done Building Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-wy1ner\\cmTC_50f0f.vcxproj" (default targets).
+          Deleting file "cmTC_ffb64.dir\\Debug\\cmTC_ffb64.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ffb64.dir\\Debug\\cmTC_ffb64.tlog\\cmTC_ffb64.lastbuildstate".
+        Done Building Project "C:\\Users\\raven\\OneDrive\\Desktop\\.123\\imgui-starter\\out\\build\\logger\\CMakeFiles\\CMakeScratch\\TryCompile-n0uv2q\\cmTC_ffb64.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.49
+        Time Elapsed 00:00:00.91
         
       exitCode: 0
   -

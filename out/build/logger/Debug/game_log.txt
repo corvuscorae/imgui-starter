@@ -1,5 +1,0 @@
-[INFO] Game started successfully
-[INFO] [GAME] Application initialized
-[INFO] [GAME] This is a test event.
-[WARN] [GAME] This is a test game warning.
-[ERROR] [GAME] This is a test game error.
