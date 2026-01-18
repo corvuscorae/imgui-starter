@@ -12,8 +12,12 @@ namespace ClassGame
     bool show_imgui_demo = false;
     bool show_log_demo = false;
 
+    // log options
     bool log_to_console = true;
     bool log_to_file = false;
+    bool show_info = true;
+    bool show_warn = true;
+    bool show_error = true;
 
     // Initialize logging system
     Logger* logger = Logger::GetInstance();
@@ -58,11 +62,22 @@ namespace ClassGame
         {
             if (ImGui::BeginMenu("log options"))
             {
+                // show which levels?
+                if (ImGui::BeginMenu("show"))
+                {
+                    ImGui::MenuItem("info", "", &show_info);
+                    ImGui::MenuItem("warn", "", &show_warn);
+                    ImGui::MenuItem("error", "", &show_error);
+
+                    ImGui::EndMenu();
+                }
+
+                // print levels to...?
                 if(ImGui::MenuItem("console", "", &log_to_console)){
                     logger->ToggleConsoleLog(log_to_console);
                 }
                 if (ImGui::MenuItem("file", "")) { 
-                    logger->WriteLogToFile();
+                    logger->WriteLogToFile("game_log.txt", show_info, show_warn, show_error);
                 }
                 ImGui::EndMenu();
             }
@@ -126,7 +141,20 @@ namespace ClassGame
             if(log_to_console){
                 for (int i = 0; i < logger->log_size; i++)
                 {
-                    ImVec4 text_color = logger->get(i).color;
+                    LogItem item = logger->get(i);
+
+                    // skip deselected levels
+                    if(!show_info && item.level == logger->level_text[logger->INFO]){
+                        continue;
+                    }
+                    if(!show_warn && item.level == logger->level_text[logger->WARN]){
+                        continue;
+                    }
+                    if(!show_error && item.level == logger->level_text[logger->ERROR]){
+                        continue;
+                    }
+
+                    ImVec4 text_color = item.color;
                     ImGui::TextColored(text_color, logger->print(i).c_str());
                 }
             }

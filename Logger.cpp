@@ -7,7 +7,7 @@ void Logger::ToggleConsoleLog(bool b)
     this->to_console_enabled = b;
 }
 
-void Logger::WriteLogToFile(const std::string &_filename)
+void Logger::WriteLogToFile(const std::string &_filename, bool show_info, bool show_warn, bool show_error)
 {
     // OPEN FILE
     if (this->file.is_open())
@@ -23,7 +23,19 @@ void Logger::WriteLogToFile(const std::string &_filename)
     {
         for (int i = 0; i < this->log.size(); i++)
         {
-            this->file << this->log.at(i).print() << "\n";
+            LogItem item = this->log.at(i);
+
+            // skip deselected levels
+            if(!show_info && item.level == level_text[INFO]){
+                continue;
+            }
+            if(!show_warn && item.level == level_text[WARN]){
+                continue;
+            }
+            if(!show_error && item.level == level_text[ERROR]){
+                continue;
+            }
+            this->file << item.print() << "\n";
         }
         this->file.flush();
     }

@@ -91,7 +91,12 @@ public:
 
     // FUNCTIONS
     void ToggleConsoleLog(bool b);
-    void WriteLogToFile(const std::string &_filename = "game_log.txt");
+    void WriteLogToFile(
+        const std::string &_filename = "game_log.txt", 
+        bool show_info = true, 
+        bool show_warn = true, 
+        bool show_error = true
+    );
     void Log(const char *message, int lvl = 0, int type = NULL);
     void clear();
     LogItem get(int i);
